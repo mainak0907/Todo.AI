@@ -14,6 +14,7 @@
     "@copilotkit/react-textarea": "^0.37.0",
     "@copilotkit/react-ui": "^0.37.0",
     "@copilotkit/shared": "^0.37.0",
+    "@kinde-oss/kinde-auth-nextjs": "^1.8.9",
     "install": "^0.13.0",
     "nanoid": "^5.0.7",
     "next": "14.2.3",
