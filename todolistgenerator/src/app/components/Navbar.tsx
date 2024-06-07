@@ -1,18 +1,19 @@
-import Image from "next/image"
+import Image from "next/image";
 import {
     getKindeServerSession,
     RegisterLink,
     LoginLink,
     LogoutLink,
-} from "@kinde-oss/kinde-auth-nextjs/server"
+} from "@kinde-oss/kinde-auth-nextjs/server";
+import ThemeSwitch from "./ThemeSwitch";
 
 export default function Navbar() {
-    const { isAuthenticated, getUser } = getKindeServerSession()
-    const user = getUser()
+    const { isAuthenticated, getUser } = getKindeServerSession();
+    const user = getUser();
 
     return (
-        <nav className="flex justify-between items-center py-6 font-bold w-4/5 mx-auto bg-white">
-            <h1 className="text-3xl">Todo.AI</h1>
+        <nav className="flex justify-between items-center py-6 font-bold w-4/5 mx-auto bg-transparent">
+            <h1 className="text-2xl px-4 py-2 rounded bg-black text-white">Todo.AI</h1>
             <div className="flex gap-4 items-center">
                 {!isAuthenticated() ? (
                     <>
@@ -44,7 +45,8 @@ export default function Navbar() {
                         </div>
                     </div>
                 )}
+                <ThemeSwitch />
             </div>
         </nav>
-    )
+    );
 }
