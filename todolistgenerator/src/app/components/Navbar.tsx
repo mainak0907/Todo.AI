@@ -41,7 +41,7 @@ export default function Navbar() {
                                 {user?.given_name} {user?.family_name}
                             </p>
 
-                            <LogoutLink className="text-black">Log out</LogoutLink>
+                            <LogoutLink className="text-black dark:text-white">Log out</LogoutLink>
                         </div>
                     </div>
                 )}

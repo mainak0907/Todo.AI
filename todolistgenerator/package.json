@@ -15,7 +15,10 @@
     "@copilotkit/react-ui": "^0.37.0",
     "@copilotkit/shared": "^0.37.0",
     "@kinde-oss/kinde-auth-nextjs": "^1.8.9",
+    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.9.0",
     "install": "^0.13.0",
+    "jspdf": "^2.5.1",
     "nanoid": "^5.0.7",
     "next": "14.2.3",
     "next-themes": "^0.3.0",
@@ -25,6 +28,7 @@
     "react-icons": "^5.2.1"
   },
   "devDependencies": {
+    "@types/jspdf": "^2.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
