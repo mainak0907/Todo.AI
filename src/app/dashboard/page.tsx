@@ -39,12 +39,12 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="border border-violet-800 rounded-md max-w-2xl mx-auto p-4 mt-4 dark:border-white">
-      <h1 className="text-2xl text-violet-800 font-bold mb-4 dark:text-white">
+    <div className="border border-violet-800 rounded-md max-w-2xl mx-auto p-4 mt-4 dark:border-white sm:p-6 md:p-8">
+      <h1 className="text-2xl text-violet-800 font-bold mb-4 dark:text-white sm:text-3xl md:text-4xl">
         Create a to-do list
       </h1>
       <CopilotKit runtimeUrl="/api/copilotkit">
-        <div ref={contentRef} className="bg-white p-4 rounded-md shadow-md dark:bg-transparent">
+        <div ref={contentRef} className="bg-white p-4 rounded-md shadow-md dark:bg-transparent sm:p-6 md:p-8">
           <TodoList />
           <CopilotPopup
             instructions={
@@ -61,10 +61,10 @@ const Dashboard: React.FC = () => {
           />
         </div>
       </CopilotKit>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-4 sm:mt-6 md:mt-8">
         <button
           onClick={handleDownloadPdf}
-          className="bg-violet-800 text-white py-2 px-4 rounded-md"
+          className="bg-violet-800 text-white font-bold py-2 px-4 rounded-md sm:py-3 sm:px-6 md:py-4 md:px-8"
         >
           Download as PDF
         </button>

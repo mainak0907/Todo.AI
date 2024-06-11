@@ -12,36 +12,35 @@ export default function Navbar() {
     const user = getUser();
 
     return (
-        <nav className="flex justify-between items-center py-6 font-bold w-4/5 mx-auto bg-transparent">
-            <h1 className="text-2xl px-4 py-2 rounded bg-black text-white">Todo.AI</h1>
-            <div className="flex gap-4 items-center">
+        <nav className="flex justify-between items-center py-4 md:py-6 w-full px-4 bg-transparent">
+            <h1 className="text-xl font-extrabold md:text-2xl px-2 md:px-4 py-1 md:py-2 rounded bg-black text-white">Todo.AI</h1>
+            <div className="flex gap-2 md:gap-4 items-center">
                 {!isAuthenticated() ? (
                     <>
-                        <LoginLink className="bg-black text-white px-4 py-2 rounded">Sign in</LoginLink>
-                        <RegisterLink className="bg-black text-white px-4 py-2 rounded">Sign up</RegisterLink>
+                        <LoginLink className="bg-black text-white font-extrabold text-sm md:text-base px-3 md:px-4 py-1 md:py-2 rounded">Sign in</LoginLink>
+                        <RegisterLink className="bg-black text-white text-sm font-extrabold md:text-base px-3 md:px-4 py-1 md:py-2 rounded">Sign up</RegisterLink>
                     </>
                 ) : (
-                    <div className="flex gap-4 font-normal">
+                    <div className="flex items-center gap-2 md:gap-4 font-normal">
                         {user?.picture ? (
                             <Image
                                 className="rounded-full"
                                 src={user?.picture}
-                                width={55}
-                                height={55}
+                                width={40}
+                                height={40}
                                 alt="user profile avatar"
                             />
                         ) : (
-                            <div className="bg-black text-white rounded-full p-4">
+                            <div className="bg-black text-white rounded-full p-2 md:p-4 text-center">
                                 {user?.given_name?.[0]}
                                 {user?.family_name?.[0]}
                             </div>
                         )}
-                        <div>
-                            <p className="text-2xl">
+                        <div className="text-sm md:text-base">
+                            <p className="text-base md:text-xl">
                                 {user?.given_name} {user?.family_name}
                             </p>
-
-                            <LogoutLink className="text-black dark:text-white">Log out</LogoutLink>
+                            <LogoutLink className="text-black dark:text-white text-sm md:text-base">Log out</LogoutLink>
                         </div>
                     </div>
                 )}
@@ -50,3 +49,4 @@ export default function Navbar() {
         </nav>
     );
 }
+

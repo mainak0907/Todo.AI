@@ -188,23 +188,24 @@ export const TodoList: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-xl mx-auto p-4">
       <div className="flex mb-5">
         <input
           className="border rounded-md p-2 flex-1 mr-2 bg-slate-200 dark:bg-slate-800 dark:text-white"
           value={input}
           onChange={(e) => setInput(e.target.value)} // Update the input state on change
           onKeyDown={handleKeyPress} // Handle the Enter key press
+          placeholder="Add a new todo"
         />
         <button
-          className="bg-black rounded-md p-2 text-white dark:bg-white dark:text-black dark:border-black border-2 border-black"
-          // Add the todo on button click
-          onClick={addTodo}>
+          className="bg-black rounded-md p-2 text-white dark:bg-white dark:text-black dark:border-black border-2 border-black hover:bg-gray-800 dark:hover:bg-gray-300"
+          onClick={addTodo} // Add the todo on button click
+        >
           Add Todo
         </button>
       </div>
       {todos.length > 0 && ( // Check if there are any todos
-        <div className="border rounded-lg">
+        <div className="border rounded-lg divide-y divide-gray-200 dark:divide-gray-700">
           {todos.map((todo, index) => (
             <TodoItem
               key={todo.id} // Unique key for each todo item

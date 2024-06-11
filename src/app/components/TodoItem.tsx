@@ -20,12 +20,12 @@ export const TodoItem: React.FC<TodoItemProps> = ({
   return (
     <div
       className={
-        "flex items-center justify-between px-4 py-2 group" +
-        (hasBorder ? " border-b" : "") // Conditionally adding a border class if hasBorder is true
+        "flex items-center justify-between p-4 group" +
+        (hasBorder ? " border-b border-gray-300 dark:border-gray-700" : "") // Conditionally adding a border class if hasBorder is true
       }>
-      <div className="flex items-center">
+      <div className="flex items-center w-full">
         <input
-          className="h-5 w-5 text-black border border-gray-500 rounded-md mr-2"
+          className="h-5 w-5 text-black border border-gray-500 rounded-md mr-2 focus:ring-purple-500 focus:ring-2"
           type="checkbox"
           checked={todo.isCompleted} // Checkbox is checked if the todo is completed
           onChange={() => toggleComplete(todo.id)} // Toggle completion status on change
@@ -35,17 +35,17 @@ export const TodoItem: React.FC<TodoItemProps> = ({
             todo.isCompleted ? "text-gray-500 line-through" : "text-gray-900" // Apply different styles if the todo is completed
           }`}>
           {todo.assignedTo && (
-            <span className="border rounded-md text-xs py-[2px] px-1 mr-2  border-purple-700 uppercase bg-purple-400 text-black font-medium">
+            <span className="border rounded-md text-xs py-1 px-2 mr-2 border-purple-700 uppercase bg-purple-400 text-black font-medium">
               {todo.assignedTo} {/* Display the assigned person's name if available */}
             </span>
           )}
           {todo.text} {/* Display the todo text */}
         </span>
       </div>
-      <div>
+      <div className="flex items-center">
         <button
           onClick={() => deleteTodo(todo.id)} // Delete the todo on button click
-          className="text-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-blue-300">
+          className="text-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-blue-300 p-1 rounded-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -65,7 +65,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({
             const name = prompt("Assign person to this task:");
             assignPerson(todo.id, name);
           }}
-          className="ml-2 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:to-blue-300">
+          className="ml-2 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:bg-blue-300 p-1 rounded-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
