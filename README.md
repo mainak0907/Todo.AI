@@ -1,7 +1,9 @@
 # Todo.AI-Using-Next-JS
-AI Powered Todo List with Advanced NextJS Features
+AI-Powered Todo List with Advanced NextJS Features
 
-```npm i kinde-oss/kinde-auth-nextjs```
+<img width="946" alt="image" src="https://github.com/mainak0907/Todo.AI-Using-Next-JS/assets/88925745/8c24c922-bb94-4ed0-b090-134c5ee772cb">
+
+Try It out from the Link
 
 - Kinde Auth
 - Next-themes Dark Mode Light Mode Switch
