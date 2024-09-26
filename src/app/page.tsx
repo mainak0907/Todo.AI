@@ -9,11 +9,6 @@ export default function Home() {
       <p className="text-2xl sm:text-4xl text-gray-700 dark:text-yellow-100">
         Todo.AI is the Right Place for You
       </p>
-      <Link href="https://github.com/mainak0907/Todo.AI-Using-Next-JS" target="_blank">
-        <span className="text-lg sm:text-2xl px-3 sm:px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">
-          Go to Source Code
-        </span>
-      </Link>
     </section>
   );
 }
